@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(600px, auto) repeat(5, 1fr);
+}
+
+header, section, footer {
+    padding: 20px;
+}
+
+header {
+    background-image: url('../img/header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    align-items: center;
+}
+
+header .titulo {
+    font-family: 'Luckiest Guy';
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100%;
+    text-align: center;
+    width: 400px;
+}
+
+header .subtitulo {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    width: 800px;
+}
+
+header .botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 28px;
+    height: 44px;
+}
+
+#baixarwin {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+#abradiscord {
+    background-color: #23272A;
+    color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.container-1,
+.container-2,
+.container-3,
+.container-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-1 {
+    background-color: white;
+    max-height: 200px;
+}
+
+.container-2,
+.container-4 {
+    background-color: #F6F6F6;
+}
+
+.container-3 {
+    background-color: white;
+}
+
+.container-1 > div,
+.container-2 > div,
+.container-3 > div,
+.container-4 > div {
+    flex: 1 1 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.container-4 div {
+    margin: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Open Sans';
+}
+
+#titulocont4 {
+    font-family: 'Luckiest Guy';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+}
+
+#textocont4 {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: #23272A;
+    border: 2px solid;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header .titulo {
+        font-size: 36px;
+        width: auto;
+    }
+
+    header .subtitulo {
+        font-size: 14px;
+        width: auto;
+    }
+
+    .header-content {
+        padding: 10px;
+    }
+
+    .container-1,
+    .container-2,
+    .container-3,
+    .container-4 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container-1 > div,
+    .container-2 > div,
+    .container-3 > div,
+    .container-4 > div {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #titulocont4 {
+        font-size: 28px;
+    }
+
+    #textocont4 {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+    }
+
+    .botoes button {
+        width: 250px;
+        height: 44px;
+        font-size: 14px;
+        white-space: nowrap;
+        border-radius: 12px;
+    }
+
+    footer img {
+        width: 80%;
+        height: auto;
+    }
+}
